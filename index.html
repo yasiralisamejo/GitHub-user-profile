@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Fetcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(198, 236, 122);
+            text-align: center;
+        }
+        
+        .container {
+            margin-top: 50px;
+            backdrop-filter: blur(10px);
+        }
+        h1{
+            background: linear-gradient(to right, rgb(198, 76, 57) , rgb(2, 31, 253));
+            background-clip: text;
+            color:transparent;
+            backdrop-filter: blur(10px);
+
+        }
+        input[type="text"] {
+          padding: 10px;
+          border: none;
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          background-color: #ffffff50;
+          }
+          
+          button {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 10px;
+          backdrop-filter: blur(10px);
+          background-color: #ffffff50;
+          cursor: pointer;
+          }
+          
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .info {
+            margin-top: 20px;
+        }
+        .repos, .followers {
+            margin-top: 30px;
+            text-align: left;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+         #username {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            background-color: #ffffff50;
+            }
+            
+            button[onclick="fetchGitHubProfile()"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            background-color: #ffffff50;
+            cursor: pointer;
+            }
+ 
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub Profile Fetcher</h1>
+        <input type="text" id="username" placeholder="Enter GitHub Username" />
+        <button onclick="fetchGitHubProfile()">Fetch Profile</button>
+        <div id="profile-container" class="profile"></div>
+        <div id="repos-container" class="repos"></div>
+        <div id="followers-container" class="followers"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
